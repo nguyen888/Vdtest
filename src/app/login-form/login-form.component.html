@@ -1,35 +1,37 @@
 <div class="formmain">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" >
+   
+        
     <img [src]="avatar.url" alt="" style="width: 10em;height: 10em; padding: 50px; ">
-    <form action='#'>
-        <p class="txt">
-            <label>Trường phổ thông cơ sở Tân Mai</label>
+
+    <p class="txt">
+        <label>Trường phổ thông cơ sở Tân Mai</label>
+    </p>
+    <p class="form-username">
+        <label>Tên đăng nhập</label>
+        <td></td>
+        <input type="text" class="form-username" name="username" ngModel />
+    </p>
+    <p class="form-password">
+        <label>Mật khẩu</label>
+        <td></td>
+        <input type="password" class="form-password" name="password" ngModel />
+    </p>
+
+    <th>
+        <p class="form-savelogin">
+            <input type="checkbox" class="form-savelogin" name="savelogin" ngModel />
+            <label>Nhớ đăng nhập</label>
+        </p>
+    </th>
+    <th>
+        <p class="form-link">
+            <a [routerLink]="['forgotpassword']" routerLinkActive="active">Quên mật khẩu</a>
         </p>
 
-        <p class="form-username">
-            <label>Tên đăng nhập</label>
-            <td></td>
-            <input type="text" class="form-username" name="username" ngModel />
-        </p>
-        <p class="form-password">
-            <label>Mật khẩu</label>
-            <td></td>
-            <input type="password" class="form-password" name="password" ngModel />
-        </p>
-
-        <th>
-            <p class="form-savelogin">
-                <input type="checkbox" class="form-savelogin" name="savelogin" ngModel />
-                <label>Nhớ đăng nhập</label>
-            </p>
-        </th>
-        <th></th>
-
-        <th>
-            <p class="form-link">
-                <a routerLink="forgotpassword" routerLinkActive="active">Quên mật khẩu</a>
-        </th>
-        <button class="form-login" name="login" ngModel>Đăng nhập</button>
-
-    </form>
+    </th>
+   
+    <button type="submit" class="btn btn-login"  >Đăng nhập</button>
+</form>
 </div>
 <router-outlet></router-outlet>

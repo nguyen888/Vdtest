@@ -1,17 +1,13 @@
-<div class="forgotpassword">
-    <div class="frmforgotpassword">
-        <form #forgotForm="ngForm" (ngSubmit)="onSubmit(forgotForm.value)" >
+<div class="verification">
+    <div class="frmverification">
+        <form #verificationForm="ngForm"  (ngSubmit)="onSubmit(verificationForm.value)">
             
-            <p class="txt-username">
-                <label>Tên đăng nhập</label>
+            <p class="txt-code">
+                <label>Mã xác thực</label>
                 <td></td>
-                <input type="text" class="txt-username" name="username" ngModel />
+                <input type="text" class="txt-code" name="code" ngModel />
             </p>
-            <p class="txt-mail">
-                <label>Email</label>
-                <td></td>
-                <input type="email" class="txt-mail" name="mail" ngModel />
-            </p>
+            
             <ul>
                 <th>
                     <p class="form-cancel">
