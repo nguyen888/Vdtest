@@ -1,4 +1,7 @@
-
+.form-link{
+  text-align: right;
+  padding-left:50px ;
+}
 .formmain {
   background-color: lightgrey;
   width: 300px;
@@ -11,3 +14,4 @@
 .txt{
   font-size: 1.2em;
 }
+

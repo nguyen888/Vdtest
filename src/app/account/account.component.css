@@ -1,0 +1,44 @@
+.head{
+    border: 1px solid black;
+}
+.Line{
+   
+    margin-left: 50em;
+    
+}
+.head img{
+    float: left;
+    padding-left: 10%;
+}
+.Line h1{
+    
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+
+.main{
+    border: 1px solid black;
+    padding:auto;
+    overflow: auto;
+}
+.List{
+    border:1px solid black;
+    margin: auto;
+    float: left;
+    content: "";
+    display: table;
+    clear: both;
+    overflow: auto;
+}
+.page{
+    border:1px solid black;
+    overflow: auto;
+}
+
+
+
+
+

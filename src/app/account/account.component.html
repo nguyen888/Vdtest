@@ -1,0 +1,77 @@
+<div class="head">
+    <div class="image">
+        <img [src]="avatar.url" alt="" style=" height: 5em; ">
+        <th></th>
+        <div class="Line">
+            <h1>Trường tiểu học Tân Mai</h1>
+            <h1>2019-2020</h1>
+            <h1>Học Kỳ 1</h1>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="main">
+    <div class="List">
+        <ul>
+            <img [src]="avatar.url" alt="" style="width: 5em;height: 5em;margin: auto;padding-right: 50px; ">
+            <td></td>
+            <label>aaaaaa</label>
+            
+        </ul>
+    </div>
+    <div class="page">
+        <form action="">
+            <p class="form-username">
+                <label>Tên đăng nhập</label>
+                <td></td>
+                <input type="text" class="form-username" name="username" ngModel />
+            </p>
+            <p class="form-fullname">
+                <label>Họ và tên</label>
+                <td></td>
+                <input type="text" class="form-fullname" name="fullname" ngModel />
+            </p>
+            <p class="form-right">
+                <label>Quyền sử dụng hệ thống</label>
+                <td></td>
+                <input type="text" class="form-right" name="right" ngModel />
+            </p>
+            <p class="form-teamuse">
+                <label>Nhóm người sử dụng</label>
+                <td></td>
+                <input type="" class="form-teamuse" name="teamuse" ngModel />
+            </p>
+            <p class="form-sex">
+                <label>Giới tính</label>
+                <td></td>
+                <input type="" class="form-sex" name="sex" ngModel />
+            </p>
+            <p class="form-phonenumeber">
+                <label>Số điện thoại</label>
+                <td></td>
+                <input type="tel" class="form-phonenumeber" name="phonenumeber" ngModel />
+            </p>
+            <p class="form-adress">
+                <label>Địa chỉ</label>
+                <td></td>
+                <input type="text" class="form-adress" name="adress" ngModel />
+            </p>
+            <ul>
+                <th>
+                    <p class="form-cancel">
+                        <button (click)="goBack()">Hủy</button>
+                    </p>
+                </th>
+                <td></td>
+                <th>
+                    <p class="form-send">
+                        <button type="submit" class="btn btn-send">Gửi</button>
+                    </p>
+                </th>
+            </ul>
+        </form>
+    </div>
+
+</div>
+
+<router-outlet></router-outlet>

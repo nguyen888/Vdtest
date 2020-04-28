@@ -1,17 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
-// import { LoginFormComponent } from './login-form/login-form.component';
 import{FormsModule} from '@angular/forms';
 import { routingComponent, AppRoutingModule } from './app-routing.module';
+import { LoginService } from './services/login.service';
+import { CheckLoginGuard } from './guards/check-login.guard';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    // LoginFormComponent,
-    routingComponent
+    
+    routingComponent,
+    
+   
+    
+    
+   
     
   ],
   imports: [
@@ -21,7 +27,7 @@ import { routingComponent, AppRoutingModule } from './app-routing.module';
     
     
   ],
-  providers: [],
+  providers: [LoginService,CheckLoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

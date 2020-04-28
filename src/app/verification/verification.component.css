@@ -1,4 +1,4 @@
-.forgotpassword {
+.verification {
     background-color: lightgrey;
     width: 300px;
     border: 5px solid black;
@@ -6,19 +6,19 @@
     margin: auto;
     
   }
-.frmforgotpassword{
+.frmverification{
     /* border: 2px solid yellow; */
 
     padding-left:20% ;
     overflow: auto;
 }
-.frmforgotpassword ul{
+.frmverification ul{
     display: inline-block;
     float: right;
     margin: auto;
     
 }
-.frmforgotpassword th{
+.frmverification th{
     padding: 15px;
 }
 
