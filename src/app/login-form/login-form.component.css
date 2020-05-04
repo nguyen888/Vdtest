@@ -1,17 +1,15 @@
 .form-link{
   text-align: right;
-  padding-left:50px ;
+  padding-left:20px ;
 }
 .formmain {
   background-color: lightgrey;
-  width: 300px;
+  width: 400px;
   border: 5px solid black;
-  padding: 50px;
+  padding: 60px;
   margin: auto;
   
 }
-
 .txt{
   font-size: 1.2em;
 }
-
