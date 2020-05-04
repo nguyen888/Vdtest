@@ -5,12 +5,13 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { AccountComponent } from './account/account.component';
 import { VerificationComponent } from './verification/verification.component';
 import { NewpasswordComponent } from './newpassword/newpassword.component';
+
 const routes: Routes=[
     {path:'',component:LoginFormComponent},
     {path:'forgotpassword',component: ForgotPasswordComponent},
     {path:'account',component:AccountComponent},
     {path:'verification',component:VerificationComponent},
-    {path:'newpassword',component:NewpasswordComponent}
+    {path:'newpassword',component:NewpasswordComponent},
     
 ]
 @NgModule({
@@ -19,6 +20,11 @@ const routes: Routes=[
 })
 export class AppRoutingModule{}
 export const routingComponent=[
-    LoginFormComponent,ForgotPasswordComponent,AccountComponent,VerificationComponent,NewpasswordComponent
+    LoginFormComponent,
+    ForgotPasswordComponent,
+    AccountComponent,
+    VerificationComponent,
+    NewpasswordComponent,
+    
 
 ]
