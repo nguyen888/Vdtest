@@ -23,7 +23,10 @@
 .List{
     border:1px solid black;
     /* margin: auto; */
+    width: 250px ;
     float: left;
+    
+    
     /* content: "";
     display: table;
     clear: both;
@@ -41,6 +44,7 @@
     border:1px solid black;
     overflow: auto;
     padding-left: 3%;
+    margin: auto;
 }
 /*.page ul{
     display: inline-block;

@@ -16,135 +16,48 @@
         <ul class="accounts">
             <img [src]="avatar.url" alt="" style="height: 5em;margin: auto;padding-right: 50px; ">
             <td></td>
-            <label>aaaaaa</label>   
+            <label>aaaaaa</label>
         </ul>
         <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-            <!-- This is the tree node template for leaf nodes -->
+            <!--lấy dữ liệu cây-->
+
+
+
             <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-              <!-- use a disabled button to provide padding for tree leaf -->
-              <button mat-icon-button disabled></button>
-              {{node.name}}
+                <!-- mở rộng các nút -->
+
+                <!-- <button mat-icon-button disabled>
+                    <a [routerLink]="['forgotpassword']" routerLinkActive="active">{{node.name}}</a>
+                </button> -->
+                <a>
+                    {{node.name}}
+                </a>
+
             </mat-tree-node>
-            <!-- This is the tree node template for expandable nodes -->
+
+           
             <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-              <button mat-icon-button matTreeNodeToggle
-                      [attr.aria-label]="'toggle ' + node.name">
-                <mat-icon class="mat-icon-rtl-mirror">
-                  {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-                </mat-icon>
-              </button>
-              {{node.name}}
+                <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+                    <mat-icon class="mat-icon-rtl-mirror">
+                        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                    </mat-icon>
+                </button>
+                {{node.name}}
+                <!--lấy tên các nút khai báo bên kia-->
             </mat-tree-node>
-          </mat-tree>
+        </mat-tree>
     </div>
-    <div class="page">
+    <!-- <div class="page">
         <ngb-tabset [destroyOnHide]="false">
             <ngb-tab title="Simple">
                 <ng-template ngbTabContent>
-                    <div></div>
-                </ng-template>
-            </ngb-tab>
-            <ngb-tab title="Simple2">
-                <ng-template ngbTabContent>
                     <p>123 </p>
+
                 </ng-template>
-
             </ngb-tab>
-
-            <!-- <ngb-tab>
-              <ng-template ngbTabTitle><b>Fancy</b> title</ng-template>
-              <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-                <p>Exercitation +1 labore velit, blog sartorial PBR leggings next </p>
-              </ng-template>
-            </ngb-tab> -->
-            <!-- <ngb-tab title="visible">
-              <ng-template ngbTabContent>
-                <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, </p>
-              </ng-template>
-            </ngb-tab> -->
         </ngb-tabset>
+    </div> -->
 
-        <!-- <form action="">
-            <div class="form-username">
-              
-                    <label>Tên đăng nhập</label>
-                    <div class="form-text">
-                        <input type="text" class="form-username" name="username" ngModel />
-                    </div>
-                    
-                
-            </div>
-
-            <th></th>
-            
-            <div class="form-fullname">
-                <label>Họ và tên</label>
-                <div class="form-text">
-                    <input type="text" class="form-fullname" name="fullname" ngModel />
-                </div>
-            </div>
-            
-            <th></th>
-            
-            <div class="form-right">
-                <label>Quyền sử dụng hệ thống</label>
-                <div class="form-text">
-                    <input type="text" class="form-right" name="right" ngModel />
-                </div>
-            </div>
-
-            <th></th>
-
-            <div class="form-teamuse">
-                <label>Nhóm người sử dụng</label>
-                <div class="form-text">
-                    <input type="" class="form-teamuse" name="teamuse" ngModel />
-                </div>
-            </div>
-
-            <th></th>
-            
-            <div class="form-sex">
-                <label>Giới tính</label>
-                <div class="form-text">
-                    <input type="" class="form-sex" name="sex" ngModel />
-                </div>
-            </div>
-            
-            <th></th>
-            
-            <div class="form-phonenumeber">
-                <label>Số điện thoại</label>
-                <div class="form-text">
-                    <input type="tel" class="form-phonenumeber" name="phonenumeber" ngModel />
-                </div>
-            </div>
-
-            <th></th>
-
-            <div class="form-adress">
-                <label>Địa chỉ</label>
-                <div class="form-text">
-                    <input type="text" class="form-adress" name="adress" ngModel />
-                </div>
-            </div>
-            <ul>
-                <th>
-                    <p class="form-cancel">
-                        <button (click)="goBack()">Hủy</button>
-                    </p>
-                </th>
-                <td></td>
-                <th>
-                    <p class="form-send">
-                       <button type="submit" class="btn btn-send">Gửi</button>
-                    </p>
-                </th>
-            </ul> 
-
-
-        </form> -->
-    </div>
 
 </div>
 

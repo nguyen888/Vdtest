@@ -5,57 +5,63 @@ import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 
 
-interface FoodNode {
+
+
+
+interface Node {
   name: string;
-  children?: FoodNode[];
+  children?: Node[];
+  
 }
 
 interface ExampleFlatNode {
   expandable: boolean;
   name: string;
   level: number;
+  
+  
 }
-
-const TREE_DATA: FoodNode[] = [
+// dữ liệu của cây
+const TREE_DATA: Node[] = [
   {
-    name: 'Tài khoản',
+    name: 'Tài khoản', 
     children: [
-      { name: 'Thông tin tài khoản' },
-      { name: 'Thay đổi mật khẩu' },
-      { name: 'Đăng xuất' },
+      { name: 'Thông tin tài khoản'  },
+      { name: 'Thay đổi mật khẩu'  },
+      { name: 'Đăng xuất', },
     ]
   }, {
-    name: 'Quản lý người sử dụng',
+    name: 'Quản lý người sử dụng'  ,
     children: [
 
-      { name: 'Cấu hình nhóm người sử dụng' },
-      { name: 'Danh sách người sử dụng' },
+      { name: 'Cấu hình nhóm người sử dụng'  },
+      { name: 'Danh sách người sử dụng'  },
       { name: 'Thêm người sử dụng' },
 
 
     ]
   },
   {
-    name: 'Thông tin cấu hình',
+    name: 'Thông tin cấu hình',  
     children: [
 
-      { name: 'Cấu hình trường học' },
+      { name: 'Cấu hình trường học'  },
       { name: 'Cấu hình năm học' },
-      { name: 'Cấu hình học kỳ' },
-      { name: 'Cấu hình tiết học' },
+      { name: 'Cấu hình học kỳ'},
+      { name: 'Cấu hình tiết học'   },
       { name: 'Cấu hình khối' },
-      { name: 'Khai báo tổ bộ môn' },
-      {name:'Khai báo môn học theo trường'}
+      { name: 'Khai báo tổ bộ môn'   },
+      {name:'Khai báo môn học theo trường'  }
 
 
     ]
   },
   {
-    name: 'Quản lý lớp học',
+    name: 'Quản lý lớp học',  
     children: [
 
       { name: 'Danh sách lớp học' },
-      { name: 'Danh sách học sinh theo lớp học' },
+      { name: 'Danh sách học sinh theo lớp học'   },
       { name: 'Danh sách môn học theo lớp' }, 
     ]
   },
@@ -69,13 +75,15 @@ const TREE_DATA: FoodNode[] = [
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
 })
-export class AccountComponent implements OnInit {
+export class AccountComponent implements OnInit 
+{
 
-  private _transformer = (node: FoodNode, level: number) => {
+  private _transformer = (node: Node, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
       name: node.name,
       level: level,
+      
     };
   }
 
@@ -83,7 +91,7 @@ export class AccountComponent implements OnInit {
     node => node.level, node => node.expandable);
 
   treeFlattener = new MatTreeFlattener(
-    this._transformer, node => node.level, node => node.expandable, node => node.children);
+    this._transformer, node => node.level,  node => node.expandable, node => node.children);
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
@@ -97,12 +105,18 @@ export class AccountComponent implements OnInit {
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
   // public isCollapsed = false;//collapse
   avatar: any = {};
+ 
 
   ngOnInit(): void {
     this.avatar.url = 'https://i.9mobi.vn/cf/images/ba/2018/4/16/anh-avatar-dep-4.jpg';
+    
   }
   goBack() {
     this.router.navigate(['']);
   }
-
+  // onclick(){
+  //   if(Node.name=="Thông tin tài khoản"){
+  //     this.router.navigate(['changepassword']);
+  //   };
+  // }
 }

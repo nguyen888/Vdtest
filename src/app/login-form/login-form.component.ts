@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 
 
-
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -26,7 +25,7 @@ export class LoginFormComponent implements OnInit {
     this.router.navigate(['account']);
     }
     else{
-      
+    
       
     }
   }

@@ -1,38 +1,43 @@
 <div class="formmain">
-    <form  #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)" >
-   
-        
-    <img [src]="avatar.url" alt="" style="width: 10em;height: 10em; margin: auto;  padding: 10% ">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
 
-    <div class="txt">
-        <label>Trường phổ thông cơ sở Tân Mai</label>
-    </div>
-    <div class="form-username">
-        <label>Tên đăng nhập</label>
-        <td></td>
-        <input type="text" class="form-username" name="username" ngModel />
-        <!-- <div *ngIf="username.errors && (username.dirty|| username.touched)" class="label label-danger"></div> -->
-    </div>
-    <div class="form-password">
-        <label>Mật khẩu</label>
-        <td></td>
-        <input type="password" class="form-password" name="password" ngModel />
-    </div>
 
-    <th>
-        <div class="form-savelogin">
-            <input type="checkbox" class="form-savelogin" name="savelogin" ngModel />
-            <label>Nhớ đăng nhập</label>
+        <img [src]="avatar.url" alt="" style="width: 10em;height: 10em; margin: auto;  padding: 10% ">
+
+        <div class="txt">
+            <label>Trường phổ thông cơ sở Tân Mai</label>
         </div>
-    </th>
-    <th>
-        <div class="form-link">
-            <a [routerLink]="['forgotpassword']" routerLinkActive="active">Quên mật khẩu</a>
+        <div class="form-username">
+            <label>Tên đăng nhập</label>
+            <td></td>
+            <input type="text" class="form-username" name="username" ngModel /><br>
+            <!-- <div *ngIf="username.errors && (username.dirty|| username.touched)" class="label label-danger"></div> -->
+            
         </div>
 
-    </th>
-   
-    <button type="submit">Đăng nhập</button>
-</form>
+        <div class="form-password">
+            <label>Mật khẩu</label>
+            <td></td>
+            <input type="password" class="form-password" name="password" ngModel />
+        </div>
+        <td>
+
+        </td>
+        <th>
+            <div class="form-savelogin">
+                <input type="checkbox" class="form-savelogin" name="savelogin" ngModel />
+                <label>Nhớ đăng nhập</label>
+            </div>
+        </th>
+        <th>
+            <div class="form-link">
+                <a [routerLink]="['forgotpassword']" routerLinkActive="active">Quên mật khẩu</a>
+            </div>
+
+        </th>
+
+        <button type="submit">Đăng nhập</button>
+    </form>
+
 </div>
 <router-outlet></router-outlet>

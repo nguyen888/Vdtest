@@ -13,3 +13,11 @@
 .txt{
   font-size: 1.2em;
 }
+.formmain form{
+ padding: 0 20px;
+  margin: auto;
+}
+th{
+  margin: auto;
+  padding: 20px 0;
+}
