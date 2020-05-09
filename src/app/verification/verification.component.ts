@@ -18,7 +18,11 @@ export class VerificationComponent implements OnInit {
     this.router.navigate(['']);
   }
   onSubmit(value: any) {
-    this.router.navigate(['newpassword']);
+    if(value.code!=''){
+       this.router.navigate(['newpassword']);
+    }
+    else
+    alert('Lỗi chưa nhập code')  
   }
 }
 

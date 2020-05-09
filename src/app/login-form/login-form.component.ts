@@ -25,7 +25,8 @@ export class LoginFormComponent implements OnInit {
     this.router.navigate(['account']);
     }
     else{
-    
+      
+      alert('Lỗi tài khoản, mật khẩu') 
       
     }
   }

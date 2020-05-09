@@ -10,7 +10,7 @@ export class NewpasswordComponent implements OnInit {
 
   constructor(private router: Router,
 
-    ) { }
+  ) { }
 
   ngOnInit(): void {
   }
@@ -18,8 +18,13 @@ export class NewpasswordComponent implements OnInit {
     this.router.navigate(['']);
   }
   onSubmit(value: any) {
-    if(value.newpassword==value.againpassword){
-      this.router.navigate(['account']);
-    }
+
+    if (value.newpassword != "" && value.againpassword != ""&&value.newpassword == value.againpassword)
+      {
+        this.router.navigate(['account']);
+      }
+      else {
+        alert("Lỗi, hãy nhập lại mật khẩu mới")
+      }
   }
 }

@@ -12,30 +12,30 @@ interface Node {
   name: string;
   children?: Node[];
   
+  
 }
 
 interface ExampleFlatNode {
   expandable: boolean;
   name: string;
   level: number;
-  
-  
+ 
 }
 // dữ liệu của cây
 const TREE_DATA: Node[] = [
   {
     name: 'Tài khoản', 
     children: [
-      { name: 'Thông tin tài khoản'  },
-      { name: 'Thay đổi mật khẩu'  },
-      { name: 'Đăng xuất', },
+      { name: 'Thông tin tài khoản' },
+      { name: 'Thay đổi mật khẩu'   },
+      { name: 'Đăng xuất'  },
     ]
   }, {
     name: 'Quản lý người sử dụng'  ,
     children: [
 
       { name: 'Cấu hình nhóm người sử dụng'  },
-      { name: 'Danh sách người sử dụng'  },
+      { name: 'Danh sách người sử dụng' },
       { name: 'Thêm người sử dụng' },
 
 
@@ -46,8 +46,8 @@ const TREE_DATA: Node[] = [
     children: [
 
       { name: 'Cấu hình trường học'  },
-      { name: 'Cấu hình năm học' },
-      { name: 'Cấu hình học kỳ'},
+      { name: 'Cấu hình năm học'},
+      { name: 'Cấu hình học kỳ' },
       { name: 'Cấu hình tiết học'   },
       { name: 'Cấu hình khối' },
       { name: 'Khai báo tổ bộ môn'   },
@@ -88,10 +88,10 @@ export class AccountComponent implements OnInit
   }
 
   treeControl = new FlatTreeControl<ExampleFlatNode>(
-    node => node.level, node => node.expandable);
+    node => node.level, node => node.expandable,);
 
   treeFlattener = new MatTreeFlattener(
-    this._transformer, node => node.level,  node => node.expandable, node => node.children);
+    this._transformer, node => node.level,  node => node.expandable, node => node.children, );
 
   dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
 
